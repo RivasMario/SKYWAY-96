@@ -1,0 +1,105 @@
+(footprint "MXOnly-2.25U-Hotswap-solder" (version 20211014) (generator pcbnew)
+  (layer "F.Cu")
+  (tedit 6298D712)
+  (property "Sheetfile" "Hotswap Switch Matrix.kicad_sch")
+  (property "Sheetname" "Hotswap Switch Matrix")
+  (attr smd)
+  (fp_text reference "REF**" (at 0 3.175) (layer "F.Fab")
+    (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp ee52fdc3-ee1c-41aa-b522-764a7a84afb6)
+  )
+  (fp_text value "MX-NoLED" (at 0 -7.9375) (layer "Dwgs.User")
+    (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp 2a7b05c1-0272-49d8-ab5c-78e1d82bb371)
+  )
+  (fp_line (start 7 -7) (end -7 -7) (layer "B.SilkS") (width 0.12) (tstamp 42bfff19-d80d-49f0-885d-bce8e393145c))
+  (fp_line (start -7 -7) (end -7 7) (layer "B.SilkS") (width 0.12) (tstamp 6179d044-6a76-4a3b-b6ee-a0f4bcf2b300))
+  (fp_line (start 7 -7) (end 7 7) (layer "B.SilkS") (width 0.12) (tstamp a9b02eaa-84ed-4345-b437-c30a8ca3525c))
+  (fp_line (start -7 7) (end 7 7) (layer "B.SilkS") (width 0.12) (tstamp b2ed8e0d-66d4-4e62-ab44-407efd417869))
+  (fp_line (start 5 -7) (end 7 -7) (layer "Dwgs.User") (width 0.15) (tstamp 0e181061-60d0-4249-ae1b-8f9be1c2a11c))
+  (fp_line (start -7 7) (end -7 5) (layer "Dwgs.User") (width 0.15) (tstamp 0fd5ad96-ec0a-4621-9c99-183fdf6922c1))
+  (fp_line (start 21.43125 9.525) (end 21.43125 -9.525) (layer "Dwgs.User") (width 0.15) (tstamp 2d825e3b-6206-4ba6-8312-2aa0c67a8d8c))
+  (fp_line (start -21.43125 9.525) (end 21.43125 9.525) (layer "Dwgs.User") (width 0.15) (tstamp 3d6727ac-0284-4658-ae89-af66b78e138f))
+  (fp_line (start -7 -7) (end -7 -5) (layer "Dwgs.User") (width 0.15) (tstamp 40d65d26-1ad1-4690-be7d-c7b65790f157))
+  (fp_line (start -5 -7) (end -7 -7) (layer "Dwgs.User") (width 0.15) (tstamp 41b0b78a-6f32-458e-9755-1c50fad7c7f4))
+  (fp_line (start 7 5) (end 7 7) (layer "Dwgs.User") (width 0.15) (tstamp 514b4fb3-602c-4b07-9742-e2a55e56fa67))
+  (fp_line (start 7 -7) (end 7 -5) (layer "Dwgs.User") (width 0.15) (tstamp 5df17b03-05b7-4f77-a4b6-0fabb8527dc0))
+  (fp_line (start 7 7) (end 5 7) (layer "Dwgs.User") (width 0.15) (tstamp 93cb3522-111d-4fbd-8c1b-0fa2f0b584f8))
+  (fp_line (start 21.43125 -9.525) (end -21.43125 -9.525) (layer "Dwgs.User") (width 0.15) (tstamp a048aad6-46c7-495f-a4f5-8a222f85a336))
+  (fp_line (start -21.43125 -9.525) (end -21.43125 9.525) (layer "Dwgs.User") (width 0.15) (tstamp a6848737-910f-4888-af2a-0c1aad7dc85d))
+  (fp_line (start -5 7) (end -7 7) (layer "Dwgs.User") (width 0.15) (tstamp c06e9c1e-44c5-42f8-bf7f-e58831c4bea2))
+  (fp_line (start -5.3 -7.000001) (end -7.4 -7.000001) (layer "F.CrtYd") (width 0.127) (tstamp 24a6c31d-12a1-4d6e-b8c4-9eb4842a64f3))
+  (fp_line (start 9 -0.6) (end 6.5 -0.6) (layer "F.CrtYd") (width 0.127) (tstamp 3baae2db-ef75-45fa-9f7a-0c17aeedd273))
+  (fp_line (start -7.4 -2.6) (end -5.3 -2.6) (layer "F.CrtYd") (width 0.127) (tstamp 5c1f9bcb-0fa9-45bf-a1a2-f7588416ce82))
+  (fp_line (start 6.5 -4.500001) (end 9 -4.500001) (layer "F.CrtYd") (width 0.127) (tstamp 62623eb2-7d5f-4861-9b62-8240fbe55196))
+  (fp_line (start -7.4 -7.000001) (end -7.4 -2.6) (layer "F.CrtYd") (width 0.127) (tstamp 8736b59f-c819-44e4-b51e-8bf39804b407))
+  (fp_line (start 0.4 -2.6) (end -5.3 -2.6) (layer "F.CrtYd") (width 0.127) (tstamp 9e5b77de-f215-47f6-87fc-55ebd72547a4))
+  (fp_line (start 6.5 -0.6) (end 2.4 -0.6) (layer "F.CrtYd") (width 0.127) (tstamp a25bceaf-af68-444d-89da-fc248f16c3c1))
+  (fp_line (start -5.3 -7) (end 4 -7) (layer "F.CrtYd") (width 0.127) (tstamp a96231e3-3b73-44f6-8c88-1015e499ae49))
+  (fp_line (start 9 -4.500001) (end 9 -0.6) (layer "F.CrtYd") (width 0.127) (tstamp fd85c252-f2b7-47cb-81c5-73b5da94ed91))
+  (fp_arc (start 4 -7) (mid 5.767767 -6.267767) (end 6.5 -4.5) (layer "F.CrtYd") (width 0.127) (tstamp 0573ccb0-619b-411b-a0f6-f6ba016daa21))
+  (fp_arc (start 0.4 -2.6) (mid 1.814214 -2.014214) (end 2.4 -0.6) (layer "F.CrtYd") (width 0.127) (tstamp 87b5bedf-0f5a-451e-83f4-ea9a243018b2))
+  (fp_line (start -7.8 -7.8) (end -7.8 7.8) (layer "B.Fab") (width 0.12) (tstamp 3a6046b7-ac0a-4316-8690-c60cbc4a045e))
+  (fp_line (start 7.8 -7.8) (end -7.8 -7.8) (layer "B.Fab") (width 0.12) (tstamp 7c3b9456-25b2-4b38-89e3-e3fecd7befa9))
+  (fp_line (start 7.8 7.8) (end -7.8 7.8) (layer "B.Fab") (width 0.12) (tstamp cae6945d-f518-4bc0-92d8-07fa71ad53ab))
+  (fp_line (start 7.8 -7.8) (end 7.8 7.8) (layer "B.Fab") (width 0.12) (tstamp d515114c-2969-4486-be3c-5eddf38bd92a))
+  (pad "" np_thru_hole circle (at -11.938 8.255 180) (size 3.9878 3.9878) (drill 3.9878) (layers *.Cu *.Mask) (tstamp 037cf2ff-8e50-454b-b8ff-07b6a6348c97))
+  (pad "" np_thru_hole circle (at 0 0 180) (size 4 4) (drill 4) (layers *.Cu *.Mask) (tstamp 1d38bdfc-60ea-412c-8e4e-8ecca972a7c4))
+  (pad "" np_thru_hole circle (at 11.938 8.255 180) (size 3.9878 3.9878) (drill 3.9878) (layers *.Cu *.Mask) (tstamp 380393b6-4e9a-43e3-8fb0-4c9344f6957c))
+  (pad "" np_thru_hole circle (at -11.938 -6.985 180) (size 3.048 3.048) (drill 3.048) (layers *.Cu *.Mask) (tstamp ac4b8a4f-1fa6-45a5-b0d6-8b953c63abc2))
+  (pad "" np_thru_hole circle (at 11.938 -6.985 180) (size 3.048 3.048) (drill 3.048) (layers *.Cu *.Mask) (tstamp ad6f44a8-f462-4151-bcf2-7c299922b19b))
+  (pad "" np_thru_hole circle (at 5.08 0 180) (size 1.75 1.75) (drill 1.75) (layers *.Cu *.Mask) (tstamp e5e808dc-28d0-486b-94f7-d028b7593d90))
+  (pad "" np_thru_hole circle (at -5.08 0 180) (size 1.75 1.75) (drill 1.75) (layers *.Cu *.Mask) (tstamp fae61ee0-c765-4018-9bb8-83fc57762c07))
+  (pad "1" thru_hole circle (at 3.81 -2.54 180) (size 3.65 3.65) (drill 3.05) (layers *.Cu *.Mask) (tstamp bbc202ce-17b1-450b-8162-201d99516256))
+  (pad "1" smd rect (at 6 -2.54 180) (size 4.5 2.54) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp def6bfeb-eb69-461a-8877-aaed1fc23d79))
+  (pad "2" smd rect (at -4.75 -5.08 180) (size 4.75 2.54) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp 4a108990-e6db-4530-925f-caa57bc7bb21))
+  (pad "2" thru_hole circle (at -2.54 -5.08 180) (size 3.65 3.65) (drill 3.05) (layers *.Cu *.Mask) (tstamp c9e001b8-7e5e-40cd-9125-6c57b282acf5))
+  (group "" (id 4b282ba4-2b1b-4119-b325-8d7958ff0465)
+    (members
+      0573ccb0-619b-411b-a0f6-f6ba016daa21
+      0e181061-60d0-4249-ae1b-8f9be1c2a11c
+      0fd5ad96-ec0a-4621-9c99-183fdf6922c1
+      1d38bdfc-60ea-412c-8e4e-8ecca972a7c4
+      24a6c31d-12a1-4d6e-b8c4-9eb4842a64f3
+      3a6046b7-ac0a-4316-8690-c60cbc4a045e
+      3baae2db-ef75-45fa-9f7a-0c17aeedd273
+      40d65d26-1ad1-4690-be7d-c7b65790f157
+      41b0b78a-6f32-458e-9755-1c50fad7c7f4
+      42bfff19-d80d-49f0-885d-bce8e393145c
+      4a108990-e6db-4530-925f-caa57bc7bb21
+      514b4fb3-602c-4b07-9742-e2a55e56fa67
+      5c1f9bcb-0fa9-45bf-a1a2-f7588416ce82
+      5df17b03-05b7-4f77-a4b6-0fabb8527dc0
+      6179d044-6a76-4a3b-b6ee-a0f4bcf2b300
+      62623eb2-7d5f-4861-9b62-8240fbe55196
+      7c3b9456-25b2-4b38-89e3-e3fecd7befa9
+      8736b59f-c819-44e4-b51e-8bf39804b407
+      87b5bedf-0f5a-451e-83f4-ea9a243018b2
+      93cb3522-111d-4fbd-8c1b-0fa2f0b584f8
+      9e5b77de-f215-47f6-87fc-55ebd72547a4
+      a25bceaf-af68-444d-89da-fc248f16c3c1
+      a96231e3-3b73-44f6-8c88-1015e499ae49
+      a9b02eaa-84ed-4345-b437-c30a8ca3525c
+      b2ed8e0d-66d4-4e62-ab44-407efd417869
+      bbc202ce-17b1-450b-8162-201d99516256
+      c06e9c1e-44c5-42f8-bf7f-e58831c4bea2
+      c9e001b8-7e5e-40cd-9125-6c57b282acf5
+      cae6945d-f518-4bc0-92d8-07fa71ad53ab
+      d515114c-2969-4486-be3c-5eddf38bd92a
+      def6bfeb-eb69-461a-8877-aaed1fc23d79
+      e5e808dc-28d0-486b-94f7-d028b7593d90
+      fae61ee0-c765-4018-9bb8-83fc57762c07
+      fd85c252-f2b7-47cb-81c5-73b5da94ed91
+    )
+  )
+  (model "D:/Circuit2PCB/65% Hotswap Gojart $100/Delivery1/KiCAD Source Files/library/kbd/kicad-packages3D/kbd.3dshapes/CherryMX Switch.step"
+    (offset (xyz 0 0 -0.5))
+    (scale (xyz 1 1 1))
+    (rotate (xyz 180 0 180))
+  )
+  (model "D:/Circuit2PCB/Railexu 75% Keyboard $200 hotswap/Delivery1/Kalih Hotswap/kicad-libraries-master/models/KailhSocket.stp"
+    (offset (xyz 0.5 4 2))
+    (scale (xyz 1 1 1))
+    (rotate (xyz 180 0 0))
+  )
+)

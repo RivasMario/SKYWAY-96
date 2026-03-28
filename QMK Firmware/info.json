@@ -1,0 +1,22 @@
+
+{
+ "keyboard_name": "ahsan96",
+ "manufacturer": "Ahsan",
+ "maintainer": "Ahsan",
+ "processor": "RP2040",
+ "bootloader": "rp2040",
+ "matrix_pins": {
+  "rows": ["GP0","GP1","GP2","GP3","GP4","GP5"],
+  "cols": ["GP6","GP7","GP8","GP9","GP10","GP11","GP12","GP13","GP14","GP15","GP16","GP17","GP18","GP19","GP20","GP21","GP22","GP23","GP24"]
+ },
+ "diode_direction": "COL2ROW",
+ "rgblight": {
+  "pin": "GP25",
+  "led_count": 18
+ },
+ "usb": {
+  "vid": "0xFEED",
+  "pid": "0x0001",
+  "device_version": "1.0.0"
+ }
+}

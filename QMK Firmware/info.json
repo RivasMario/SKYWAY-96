@@ -1,8 +1,8 @@
 
 {
- "keyboard_name": "ahsan96",
- "manufacturer": "Ahsan",
- "maintainer": "Ahsan",
+ "keyboard_name": "skyway96",
+ "manufacturer": "RivasMario",
+ "maintainer": "RivasMario",
  "processor": "RP2040",
  "bootloader": "rp2040",
  "matrix_pins": {

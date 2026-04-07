@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c ':*)",
+      "Bash(python -c ':*)",
+      "Bash(where node:*)",
+      "Bash(cd /tmp)",
+      "Bash(npm install:*)",
+      "Bash(node -e ':*)",
+      "Read(//c/Users/v-mariorivas/OneDrive - Microsoft/Desktop/96_ Hotswap Keyboard PCB/**)",
+      "Bash(find \"c:/Users/v-mariorivas/OneDrive - Microsoft/Documents/GitHub/96_-Hotswap-Keyboard-PCB\" -type f \\\\\\( -iname \"*.png\" -o -iname \"*.jpg\" -o -iname \"*.jpeg\" -o -iname \"*.webp\" \\\\\\) -exec stat --format=\"%s %n\" {} \\\\;)"
+    ]
+  }
+}

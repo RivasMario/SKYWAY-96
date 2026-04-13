@@ -74,4 +74,35 @@
 
 ---
 
+## Firmware Setup & Flashing
+
+### 1. Environment Setup
+To compile the firmware, you'll need the [QMK CLI](https://docs.qmk.fm/newbs_getting_started) and the `arm-none-eabi` toolchain. On Fedora, you can install the dependencies with:
+```bash
+sudo dnf install -y arm-none-eabi-gcc-cs-c++ arm-none-eabi-newlib arm-none-eabi-binutils
+```
+
+### 2. Linking the Firmware
+Link the keyboard source to your `qmk_firmware` repository:
+```bash
+ln -sf "$(pwd)/qmk_src" ~/qmk_firmware/keyboards/skyway96
+```
+
+### 3. Compiling
+Compile the default VIA keymap:
+```bash
+qmk compile -kb skyway96 -km via
+```
+This will generate a `skyway96_via.uf2` file in your `qmk_firmware` directory.
+
+### 4. Flashing
+1. Put the board in bootloader mode: Hold the **BOOT** button, tap the **RESET** button, then release **BOOT**.
+2. The board will appear as a USB drive named `RPI-RP2`.
+3. Drag and drop the `skyway96_via.uf2` file into the `RPI-RP2` drive, or run:
+```bash
+qmk flash -kb skyway96 -km via
+```
+
+---
+
 PCB designed by Ahsan Mehmood Awan — `engrahsanmehmoodawan@gmail.com`

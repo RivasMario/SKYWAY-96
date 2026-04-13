@@ -103,6 +103,13 @@ This will generate a `skyway96_via.uf2` file in your `qmk_firmware` directory.
 qmk flash -kb skyway96 -km via
 ```
 
+### 5. Troubleshooting: GitHub Authentication
+If you are unable to push changes because password authentication is disabled, ensure you are using SSH. You can switch your remote with:
+```bash
+git remote set-url origin git@github.com:RivasMario/SKYWAY-96.git
+```
+Ensure your SSH key (e.g., `~/.ssh/github`) is added to your SSH agent or configured in `~/.ssh/config`.
+
 ---
 
 PCB designed by Ahsan Mehmood Awan — `engrahsanmehmoodawan@gmail.com`

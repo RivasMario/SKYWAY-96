@@ -1,4 +1,3 @@
-
 #include "skyway96.h"
 
 void keyboard_post_init_kb(void) {

@@ -1,8 +1,4 @@
-
-MCU = RP2040
-BOOTLOADER = rp2040
-
-RGBLIGHT_ENABLE = yes
-WS2812_DRIVER = vendor
-
+# Features
 VIA_ENABLE = yes
+RGBLIGHT_ENABLE = yes
+LTO_ENABLE = yes

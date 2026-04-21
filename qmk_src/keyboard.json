@@ -35,6 +35,10 @@
         "pin": "GP25",
         "driver": "vendor"
     },
+    "features": {
+        "rgblight": true,
+        "via": true
+    },
     "layouts": {
         "LAYOUT": {
             "layout": [

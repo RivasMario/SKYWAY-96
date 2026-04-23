@@ -2,6 +2,7 @@
   "name": "Skyway96",
   "vendorId": "0x6969",
   "productId": "0x0096",
+  "lighting": "qmk_rgblight",
   "matrix": { "rows": 6, "cols": 19 },
   "layouts": {
     "keymap": [

@@ -1,4 +1,5 @@
 # Features
 VIA_ENABLE = yes
 RGBLIGHT_ENABLE = yes
+RGBLIGHT_ANIMATIONS = yes
 LTO_ENABLE = yes

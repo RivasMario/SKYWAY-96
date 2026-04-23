@@ -113,3 +113,16 @@ Ensure your SSH key (e.g., `~/.ssh/github`) is added to your SSH agent or config
 ---
 
 PCB designed by Ahsan Mehmood Awan — `engrahsanmehmoodawan@gmail.com`
+
+## Troubleshooting & Maintenance
+
+### Linux USB Detection (udev)
+If the keyboard is not detected by VIA or Remap on Linux, run:
+```bash
+export USER_GID=`id -g`; sudo --preserve-env=USER_GID sh -c 'echo "KERNEL==\"hidraw*\", SUBSYSTEM==\"hidraw\", ATTRS{idVendor}==\"6969\", ATTRS{idProduct}==\"0096\", MODE=\"0660\", GROUP=\"$USER_GID\", TAG+=\"uaccess\", TAG+=\"udev-acl\"" > /etc/udev/rules.d/99-skyway96.rules && udevadm control --reload && udevadm trigger'
+```
+
+### Restoring "Good" Layout
+The known good layout backup (including RGB controls on Layer 1) is located at:
+`skyway96_GOOD_BACKUP_2026-04-23.json`
+Sideload this in VIA/Remap after flashing.

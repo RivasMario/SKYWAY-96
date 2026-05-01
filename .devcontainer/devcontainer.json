@@ -1,6 +1,36 @@
 {
   "name": "skyway96",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "features": {
+    "ghcr.io/tailscale/codespace/tailscale": {
+      "version": "latest"
+    }
+  },
+  "capAdd": [
+    "CAP_NET_ADMIN",
+    "CAP_MKNOD",
+    "CAP_NET_RAW"
+  ],
+  "runArgs": [
+    "--device=/dev/net/tun"
+  ],
   "remoteUser": "vscode",
-  "postCreateCommand": "git clone --depth=1 https://github.com/RivasMario/dotfiles.git ~/dotfiles && bash ~/dotfiles/install.sh"
+  "remoteEnv": { "SHELL": "/bin/zsh" },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-azuretools.vscode-docker",
+        "redhat.vscode-yaml"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "terminal.integrated.profiles.linux": {
+          "zsh": { "path": "/bin/zsh" }
+        }
+      }
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/setup.sh"
 }

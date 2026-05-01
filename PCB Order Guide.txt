@@ -1,0 +1,11 @@
+
+PCB Order Guide:
+
+
+PCBWAY:
+https://www.pcbway.com/helpcenter/Findproducts/How_do_I_place_an_order_.html
+https://www.youtube.com/watch?v=HH-DKSiopYk
+
+JLCPCB:
+https://support.jlcpcb.com/article/21-how-do-i-place-an-order
+https://oshwlab.com/CatherineAlson/How-to-Place-PCB-SMT-Order-on-JLCPCB

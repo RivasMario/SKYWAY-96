@@ -172,5 +172,15 @@
   ],
   "keycodes": [
     "qmk_lighting"
+  ],
+  "customKeycodes": [
+    {"name": "RGB Static",   "title": "Static light",   "shortName": "Static"},
+    {"name": "RGB Breathe",  "title": "Breathing",      "shortName": "Breathe"},
+    {"name": "RGB Rainbow",  "title": "Rainbow mood",   "shortName": "Rainbow"},
+    {"name": "RGB Swirl",    "title": "Rainbow swirl",  "shortName": "Swirl"},
+    {"name": "RGB Snake",    "title": "Snake",          "shortName": "Snake"},
+    {"name": "RGB Knight",   "title": "Knight",         "shortName": "Knight"},
+    {"name": "RGB Xmas",     "title": "Christmas",      "shortName": "Xmas"},
+    {"name": "RGB Gradient", "title": "Static gradient","shortName": "Grad"}
   ]
 }

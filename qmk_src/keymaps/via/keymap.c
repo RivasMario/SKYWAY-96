@@ -1,5 +1,33 @@
 #include QMK_KEYBOARD_H
 
+// Direct RGBLIGHT mode keys. UG_* has no "set specific mode" keycode and the
+// legacy RGB_M_* codes route to RGB Matrix (unused here), so define our own.
+enum custom_keycodes {
+    RGBM_PLAIN = QK_USER,
+    RGBM_BREATHE,
+    RGBM_RAINBOW,
+    RGBM_SWIRL,
+    RGBM_SNAKE,
+    RGBM_KNIGHT,
+    RGBM_XMAS,
+    RGBM_GRAD,
+};
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    if (!record->event.pressed) return true;
+    switch (keycode) {
+        case RGBM_PLAIN:   rgblight_mode(RGBLIGHT_MODE_STATIC_LIGHT);    return false;
+        case RGBM_BREATHE: rgblight_mode(RGBLIGHT_MODE_BREATHING);       return false;
+        case RGBM_RAINBOW: rgblight_mode(RGBLIGHT_MODE_RAINBOW_MOOD);    return false;
+        case RGBM_SWIRL:   rgblight_mode(RGBLIGHT_MODE_RAINBOW_SWIRL);   return false;
+        case RGBM_SNAKE:   rgblight_mode(RGBLIGHT_MODE_SNAKE);           return false;
+        case RGBM_KNIGHT:  rgblight_mode(RGBLIGHT_MODE_KNIGHT);          return false;
+        case RGBM_XMAS:    rgblight_mode(RGBLIGHT_MODE_CHRISTMAS);       return false;
+        case RGBM_GRAD:    rgblight_mode(RGBLIGHT_MODE_STATIC_GRADIENT); return false;
+    }
+    return true;
+}
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT(
         KC_ESC,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_PSCR, KC_DEL,  KC_HOME, KC_END,  KC_PGUP, KC_PGDN,
@@ -13,7 +41,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
         KC_TRNS, KC_TRNS, UG_TOGG, UG_PREV,UG_NEXT, UG_HUED, UG_HUEU, UG_SATD, UG_SATU, UG_VALD, UG_VALU, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-        KC_TRNS, KC_TRNS, UG_SPDD, UG_SPDU, RGB_M_P, RGB_M_B, RGB_M_R, RGB_M_SW,RGB_M_SN,RGB_M_K, RGB_M_X, RGB_M_G, KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+        KC_TRNS, KC_TRNS, UG_SPDD, UG_SPDU, RGBM_PLAIN, RGBM_BREATHE, RGBM_RAINBOW, RGBM_SWIRL, RGBM_SNAKE, RGBM_KNIGHT, RGBM_XMAS, RGBM_GRAD, KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
     ),

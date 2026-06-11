@@ -1,8 +1,18 @@
 # SKYWAY 96 — Hotswap Keyboard PCB
 
-96% layout, RP2040 MCU, Kailh hotswap sockets, underglow RGB. Designed for JLCPCB assembly.
+A 96% mechanical keyboard PCB built around the RP2040, with Kailh hotswap sockets and underglow RGB. Designed for JLCPCB assembly and Melody96-compatible cases.
 
 ![Keyboard](96%25%20Keyboard.png)
+
+## Contents
+
+- [Specs](#specs)
+- [Photos & Renders](#photos--renders)
+- [Layout](#layout)
+- [Repository Layout](#repository-layout)
+- [Firmware: Setup & Flashing](#firmware-setup--flashing)
+- [Troubleshooting](#troubleshooting)
+- [Credits](#credits)
 
 ---
 
@@ -11,118 +21,123 @@
 | | |
 |---|---|
 | MCU | RP2040 (QFN-56) |
-| Flash | W25Q128JVS (128Mb, SOIC-8) |
+| Flash | W25Q128JVS (128 Mb, SOIC-8) |
 | Layout | 96% — 99 keys |
 | Switches | Kailh hotswap (MX compatible) |
-| RGB | 18x WS2812B underglow |
+| RGB | 18× WS2812B underglow |
 | USB | USB-C (HRO TYPE-C-31-M-12) |
 | Regulator | AMS1117-3.3 |
 | ESD | PRTR5V0U2X |
-| Firmware | QMK + VIA |
+| Firmware | QMK + VIA / Vial |
+| Case | Melody96 / YMDK96 compatible (see [`Case/`](Case/)) |
 
 ---
 
-## PCB
+## Photos & Renders
 
-![PCB Top](PCB.png)
-![PCB Layout](PCB%20Layout.png)
+| PCB | Layout |
+|---|---|
+| ![PCB Top](PCB.png) | ![PCB Layout](PCB%20Layout.png) |
 
----
+| Rendered Top | Rendered Back |
+|---|---|
+| ![Rendered Top](<3D%20Images/Renderred%20Top.png>) | ![Rendered Back](<3D%20Images/Renderred%20Back.png>) |
 
-## 3D Renders
+| Board Top | Board Bottom |
+|---|---|
+| ![Board Top](<3D%20Images/Board%20Top.png>) | ![Board Bottom](<3D%20Images/Board%20Bottom.png>) |
 
-![Rendered Top](<3D%20Images/Renderred%20Top.png>)
-![Rendered Back](<3D%20Images/Renderred%20Back.png>)
-![Board Top](<3D%20Images/Board%20Top.png>)
-![Board Bottom](<3D%20Images/Board%20Bottom.png>)
-![Keycaps](<3D%20Images/Keycaps.png>)
-![Stabilizers](<3D%20Images/Stablizers.png>)
-![3D View](<3D%20Images/3D.png>)
-![3D Back](<3D%20Images/back%203d.png>)
-![3Dd](<3D%20Images/3Dd.png>)
+More renders (keycaps, stabilizers, alternate angles) live in [`3D Images/`](<3D%20Images/>).
 
----
+### 3D-Printable Case
 
-## 2D Layout
+Melody96-compatible printed case — full part breakdown in [`Case/`](Case/).
 
-![Top 2D](<3D%20Images/Top%202D.png>)
-![Back 2D](<3D%20Images/Back%202D.png>)
-![96% Layout](<3D%20Images/96%25%20Layout.png>)
+![Case preview](<Case/case-preview.png>)
 
 ---
 
-## KLE Data
+## Layout
 
-![Layout](<KLE%20DATA/96%25.png>)
-![Keys](<KLE%20DATA/Keys.png>)
-![Wiring](<KLE%20DATA/Wiring.png>)
-![Layer 0](<KLE%20DATA/layer0.png>)
-![VIA Labelling](<KLE%20DATA/Via%20Labelling.png>)
+96% — 99 keys. Matrix is 6 rows × 19 columns (COL2ROW).
+
+| 2D Layout | KLE |
+|---|---|
+| ![96% Layout](<3D%20Images/96%25%20Layout.png>) | ![Layout](<KLE%20DATA/96%25.png>) |
+
+Wiring, key labels, and VIA labelling diagrams are in [`KLE DATA/`](<KLE%20DATA/>).
 
 ---
 
-## Files
+## Repository Layout
 
 | Folder | Contents |
 |---|---|
-| `KiCAD Source Files/` | KiCAD project, schematics |
-| `Manufacturing & Assembly Files/` | BOM, CPL, Gerbers |
-| `QMK Firmware/` | QMK source + VIA json |
-| `Schematic/` | Schematic PDF |
-| `3D Step File/` | STEP files |
-| `VIA Json/` | VIA config |
+| [`qmk_src/`](qmk_src/) | QMK firmware source + VIA keymap |
+| [`Manufacturing & Assembly Files/`](<Manufacturing%20&%20Assembly%20Files/>) | BOM, CPL, Gerbers (for JLCPCB) |
+| [`KiCAD Source Files/`](<KiCAD%20Source%20Files/>) | KiCad project + schematics |
+| [`Schematic/`](Schematic/) | Schematic PDF |
+| [`3D Step File/`](<3D%20Step%20File/>) | STEP / 3D model files |
+| [`3D Images/`](<3D%20Images/>) | Renders and 2D images |
+| [`KLE DATA/`](<KLE%20DATA/>) | Keyboard-Layout-Editor data + diagrams |
+| [`VIA Json/`](<VIA%20Json/>) | VIA / Vial config + layout backups |
+| [`Layout PDFs/`](<Layout%20PDFs/>) | Printable layout / keymap PDFs |
+| [`Case/`](Case/) | 3D-printable case (Melody96-compatible) |
 
 ---
 
-## Firmware Setup & Flashing
+## Firmware: Setup & Flashing
 
-### 1. Environment Setup
-To compile the firmware, you'll need the [QMK CLI](https://docs.qmk.fm/newbs_getting_started) and the `arm-none-eabi` toolchain. On Fedora, you can install the dependencies with:
+### 1. Install the toolchain
+You need the [QMK CLI](https://docs.qmk.fm/newbs_getting_started) and the `arm-none-eabi` toolchain. On Fedora:
 ```bash
 sudo dnf install -y arm-none-eabi-gcc-cs-c++ arm-none-eabi-newlib arm-none-eabi-binutils
 ```
 
-### 2. Linking the Firmware
-Link the keyboard source to your `qmk_firmware` repository:
+### 2. Link the source into QMK
 ```bash
 ln -sf "$(pwd)/qmk_src" ~/qmk_firmware/keyboards/skyway96
 ```
 
-### 3. Compiling
-Compile the default VIA keymap:
+### 3. Compile
 ```bash
 qmk compile -kb skyway96 -km via
 ```
-This will generate a `skyway96_via.uf2` file in your `qmk_firmware` directory.
+Produces `skyway96_via.uf2` in your `qmk_firmware` directory.
 
-### 4. Flashing
-1. Put the board in bootloader mode: Hold the **BOOT** button, tap the **RESET** button, then release **BOOT**.
-2. The board will appear as a USB drive named `RPI-RP2`.
-3. Drag and drop the `skyway96_via.uf2` file into the `RPI-RP2` drive, or run:
-```bash
-qmk flash -kb skyway96 -km via
-```
-
-### 5. Troubleshooting: GitHub Authentication
-If you are unable to push changes because password authentication is disabled, ensure you are using SSH. You can switch your remote with:
-```bash
-git remote set-url origin git@github.com:RivasMario/SKYWAY-96.git
-```
-Ensure your SSH key (e.g., `~/.ssh/github`) is added to your SSH agent or configured in `~/.ssh/config`.
+### 4. Flash
+1. Enter bootloader: **hold BOOT → tap RESET → release BOOT**.
+2. The board mounts as a USB drive named `RPI-RP2`.
+3. Drag `skyway96_via.uf2` onto that drive, **or** run:
+   ```bash
+   qmk flash -kb skyway96 -km via
+   ```
 
 ---
 
-PCB designed by Ahsan Mehmood Awan — `engrahsanmehmoodawan@gmail.com`
+## Troubleshooting
 
-## Troubleshooting & Maintenance
-
-### Linux USB Detection (udev)
-If the keyboard is not detected by VIA or Remap on Linux, run:
+### Linux USB detection (udev)
+If VIA / Remap doesn't see the board on Linux, add a udev rule:
 ```bash
 export USER_GID=`id -g`; sudo --preserve-env=USER_GID sh -c 'echo "KERNEL==\"hidraw*\", SUBSYSTEM==\"hidraw\", ATTRS{idVendor}==\"6969\", ATTRS{idProduct}==\"0096\", MODE=\"0660\", GROUP=\"$USER_GID\", TAG+=\"uaccess\", TAG+=\"udev-acl\"" > /etc/udev/rules.d/99-skyway96.rules && udevadm control --reload && udevadm trigger'
 ```
 
-### Restoring "Good" Layout
-The known good layout backup (including RGB controls on Layer 1) is located at:
-`skyway96_GOOD_BACKUP_2026-04-23.json`
-Sideload this in VIA/Remap after flashing.
+### Restore the "known good" layout
+A verified layout backup (with RGB controls on Layer 1) lives at:
+`VIA Json/skyway96_GOOD_BACKUP_2026-04-23.json`
+Sideload it in VIA / Remap after flashing.
+
+### GitHub push fails (password auth disabled)
+Switch the remote to SSH:
+```bash
+git remote set-url origin git@github.com:RivasMario/SKYWAY-96.git
+```
+Make sure your SSH key (e.g. `~/.ssh/github`) is loaded in your SSH agent or set in `~/.ssh/config`.
+
+---
+
+## Credits
+
+- **PCB** — Ahsan Mehmood Awan · `engrahsanmehmoodawan@gmail.com`
+- **Case** — HughMann · [Thingiverse #3883](https://www.thingiverse.com/thing:3883)

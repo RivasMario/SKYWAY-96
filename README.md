@@ -2,7 +2,7 @@
 
 A 96% mechanical keyboard PCB built around the RP2040, with Kailh hotswap sockets and underglow RGB. Designed for JLCPCB assembly and Melody96-compatible cases.
 
-![Keyboard](96%25%20Keyboard.png)
+![Keyboard](<Photos/96%25%20Keyboard.png>)
 
 ## Contents
 
@@ -35,26 +35,22 @@ A 96% mechanical keyboard PCB built around the RP2040, with Kailh hotswap socket
 
 ## Photos & Renders
 
-| PCB | Layout |
-|---|---|
-| ![PCB Top](PCB.png) | ![PCB Layout](PCB%20Layout.png) |
-
 | Rendered Top | Rendered Back |
 |---|---|
-| ![Rendered Top](<3D%20Images/Renderred%20Top.png>) | ![Rendered Back](<3D%20Images/Renderred%20Back.png>) |
+| ![Rendered Top](<Photos/Renderred%20Top.png>) | ![Rendered Back](<Photos/Renderred%20Back.png>) |
 
 | Board Top | Board Bottom |
 |---|---|
-| ![Board Top](<3D%20Images/Board%20Top.png>) | ![Board Bottom](<3D%20Images/Board%20Bottom.png>) |
+| ![Board Top](<Photos/Board%20Top.png>) | ![Board Bottom](<Photos/Board%20Bottom.png>) |
 
-More renders (keycaps, stabilizers, alternate angles) live in [`3D Images/`](<3D%20Images/>).
+All renders and 2D images (keycaps, stabilizers, layouts, alternate angles) live in [`Photos/`](Photos/).
 
 ### Switch Plate
 
 Switch/stabilizer mounting plate (99 cutouts, 11× Ø4.0 screw holes, 361.95×114.30 mm).
 DXF + details in [`Plate/`](Plate/).
 
-![Switch plate](<3D%20Images/Switch%20Plate.png>)
+![Switch plate](<Photos/Switch%20Plate.png>)
 
 ### 3D-Printable Cases
 
@@ -73,7 +69,7 @@ Two Melody96-compatible printed cases — pick either. Full part breakdowns in [
 
 | 2D Layout | KLE |
 |---|---|
-| ![96% Layout](<3D%20Images/96%25%20Layout.png>) | ![Layout](<KLE%20DATA/96%25.png>) |
+| ![96% Layout](<Photos/96%25%20Layout.png>) | ![Layout](<KLE%20DATA/96%25.png>) |
 
 Wiring, key labels, and VIA labelling diagrams are in [`KLE DATA/`](<KLE%20DATA/>).
 
@@ -88,7 +84,7 @@ Wiring, key labels, and VIA labelling diagrams are in [`KLE DATA/`](<KLE%20DATA/
 | [`KiCAD Source Files/`](<KiCAD%20Source%20Files/>) | KiCad project + schematics |
 | [`Schematic/`](Schematic/) | Schematic PDF |
 | [`3D Step File/`](<3D%20Step%20File/>) | STEP / 3D model files |
-| [`3D Images/`](<3D%20Images/>) | Renders and 2D images |
+| [`Photos/`](Photos/) | Renders and 2D images |
 | [`KLE DATA/`](<KLE%20DATA/>) | Keyboard-Layout-Editor data + diagrams |
 | [`VIA Json/`](<VIA%20Json/>) | VIA / Vial config + layout backups |
 | [`Layout PDFs/`](<Layout%20PDFs/>) | Printable layout / keymap PDFs |

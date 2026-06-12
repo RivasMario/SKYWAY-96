@@ -61,5 +61,5 @@ All files required for fabrication are in `Manufacturing & Assembly Files/`:
 | `QMK Firmware/` | QMK firmware source and VIA configuration. |
 | `VIA Json/` | JSON files for VIA and Vial apps. |
 | `Schematic/` | PDF version of the circuit schematic. |
-| `3D Images/` | Renders of the PCB and final keyboard. |
+| `Photos/` | Renders of the PCB and final keyboard. |
 | `KLE DATA/` | Keyboard Layout Editor data and wiring diagrams. |

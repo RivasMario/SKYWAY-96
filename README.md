@@ -51,7 +51,7 @@ More renders (keycaps, stabilizers, alternate angles) live in [`3D Images/`](<3D
 
 ### Switch Plate
 
-Switch/stabilizer mounting plate (99 cutouts, 11× Ø3.4 screw holes, 361.95×114.30 mm).
+Switch/stabilizer mounting plate (99 cutouts, 11× Ø4.0 screw holes, 361.95×114.30 mm).
 DXF + details in [`Plate/`](Plate/).
 
 ![Switch plate](<3D%20Images/Switch%20Plate.png>)

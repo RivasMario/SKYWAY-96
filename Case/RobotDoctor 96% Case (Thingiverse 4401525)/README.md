@@ -28,10 +28,14 @@ right halves** so each fits a normal print bed; the seam sits mid-case.
 
 Pick **one profile** (flat *or* angle) and print **both halves** of it.
 
-| | |
-|---|---|
-| ![flat left](images/96plate_flat_left.png) | ![angle left](images/96plate_angle_left.png) |
-| flat-left preview | angle-left preview |
+3D renders of the four modified plates (Ø2.4 bores):
+
+| Flat | Angle |
+|------|-------|
+| ![flat left](images/render_flat_left.png)   | ![angle left](images/render_angle_left.png)   |
+| `flat_left`  | `angle_left`  |
+| ![flat right](images/render_flat_right.png) | ![angle right](images/render_angle_right.png) |
+| `flat_right` | `angle_right` |
 
 PCB used, screw holes marked in red (tape measure for scale):
 

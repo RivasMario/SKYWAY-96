@@ -16,10 +16,10 @@ Cut from 1.5 mm FR4, brass, aluminium, or POM (laser / waterjet). The DXF is
 SendCutSend-ready (no zero-length segments).
 
 **Changes from PCB-exact:** screw holes opened Ø2.4→Ø2.6 and notches grown
-+1 mm for install wiggle; bottom-row RAlt cutout removed (2 keys — RCtrl + Fn —
-left of the arrows, matching the build). Two screw holes are PCB-constrained
-~0.42 mm from a switch cutout — fine for FR4, marginal in metal; don't go above
-Ø2.6 without thickening those walls.
++1 mm for install wiggle; the bottom row left of the arrows is **2 wide keys
+(1.5u each — RCtrl + Fn)** instead of three 1u, matching the PCB's two switches
+there. One screw hole is PCB-constrained ~0.42 mm from a switch cutout — fine
+for FR4, marginal in metal; don't go above Ø2.6 without thickening that wall.
 
 ## Source
 

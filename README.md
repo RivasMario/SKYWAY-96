@@ -49,11 +49,14 @@ A 96% mechanical keyboard PCB built around the RP2040, with Kailh hotswap socket
 
 More renders (keycaps, stabilizers, alternate angles) live in [`3D Images/`](<3D%20Images/>).
 
-### 3D-Printable Case
+### 3D-Printable Cases
 
-Melody96-compatible printed case — full part breakdown in [`Case/`](Case/).
+Two Melody96-compatible printed cases — pick either. Full part breakdowns in [`Case/`](Case/).
 
-![Case preview](<Case/case-preview.png>)
+| Melody96 (HughMann) | RobotDoctor 96% |
+|---|---|
+| ![Melody96 case](<Case/case-preview.png>) | ![RobotDoctor case](<Case/RobotDoctor%2096%25%20Case%20%28Thingiverse%204401525%29/images/solid.JPG>) |
+| Multi-part: Body L/R + Stripe + Risers. [Details »](<Case/README.md>) · [Thingiverse #3883](https://www.thingiverse.com/thing:3883) | Tray-style, flat or angled. PCB-mount holes opened to Ø2.4 (M2). [Details »](<Case/RobotDoctor%2096%25%20Case%20%28Thingiverse%204401525%29/README.md>) · [Thingiverse #4401525](https://www.thingiverse.com/thing:4401525) |
 
 ---
 
@@ -140,4 +143,5 @@ Make sure your SSH key (e.g. `~/.ssh/github`) is loaded in your SSH agent or set
 ## Credits
 
 - **PCB** — Ahsan Mehmood Awan · `engrahsanmehmoodawan@gmail.com`
-- **Case** — HughMann · [Thingiverse #3883](https://www.thingiverse.com/thing:3883)
+- **Case (Melody96)** — HughMann · [Thingiverse #3883](https://www.thingiverse.com/thing:3883)
+- **Case (RobotDoctor 96%)** — RobotDoctor · [Thingiverse #4401525](https://www.thingiverse.com/thing:4401525) · CC-BY

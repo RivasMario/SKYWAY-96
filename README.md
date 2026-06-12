@@ -49,6 +49,13 @@ A 96% mechanical keyboard PCB built around the RP2040, with Kailh hotswap socket
 
 More renders (keycaps, stabilizers, alternate angles) live in [`3D Images/`](<3D%20Images/>).
 
+### Switch Plate
+
+Switch/stabilizer mounting plate (100 cutouts, 11× M2 screw holes, 361.95×114.30 mm).
+DXF + details in [`Plate/`](Plate/).
+
+![Switch plate](<3D%20Images/Switch%20Plate.png>)
+
 ### 3D-Printable Cases
 
 Two Melody96-compatible printed cases — pick either. Full part breakdowns in [`Case/`](Case/).
@@ -85,7 +92,8 @@ Wiring, key labels, and VIA labelling diagrams are in [`KLE DATA/`](<KLE%20DATA/
 | [`KLE DATA/`](<KLE%20DATA/>) | Keyboard-Layout-Editor data + diagrams |
 | [`VIA Json/`](<VIA%20Json/>) | VIA / Vial config + layout backups |
 | [`Layout PDFs/`](<Layout%20PDFs/>) | Printable layout / keymap PDFs |
-| [`Case/`](Case/) | 3D-printable case (Melody96-compatible) |
+| [`Plate/`](Plate/) | Switch plate DXF (laser/waterjet) |
+| [`Case/`](Case/) | 3D-printable cases (Melody96 + RobotDoctor) |
 
 ---
 

@@ -1,0 +1,4 @@
+# CadQuery build environment — 761 MB, recreate with: python -m venv .venv && pip install cadquery trimesh numpy matplotlib
+.venv/
+__pycache__/
+*.pyc

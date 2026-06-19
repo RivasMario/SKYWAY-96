@@ -1,61 +1,60 @@
-# Case — Melody96 (3D Printable)
+# Case — SKYWAY 96
 
 ![Case preview](case-preview.png)
 
-*Rendered from `Main Body/` — left + right printed halves.*
+Two 3D-printable case designs fit the SKYWAY 96 PCB. Both target the **Melody96 / YMDK96** 96% footprint the board is based on.
 
-3D-printable case for the SKYWAY 96 PCB. The board shares the **Melody96 / YMDK96** footprint, so any Melody96-compatible case fits.
+| Design | Folder | Construction | Tilt | Bed need |
+|---|---|---|---|---|
+| **Melody96 (HughMann)** | `Melody96 Case (HughMann)/` | 3-piece: L + Stripe + R (+ one-piece remix) | optional 5° riser | small (split) → large (1pc) |
+| **96% (RobotDoctor)** | `96% Case (RobotDoctor)/` | 2-piece: L + R | built into model (angle vs flat) | small |
+| **SKYWAY Custom (CadQuery)** | `SKYWAY Custom (CadQuery)/` | tray, 15× M2 posts; 1-piece **or** lap-split L/R; 6° feet | flat or 6° feet | 369 mm 1pc / 220 mm split |
 
-Design by **HughMann** — [Thingiverse thing #3883](https://www.thingiverse.com/thing:3883). Files mirrored here for convenience; original license terms apply.
+The **SKYWAY Custom** tray is an original parametric design (CadQuery) fitted to
+*this* PCB's exact outline + USB position — see its README to edit/regenerate.
 
-## Print Layout
+See each folder's `README.md` for the full parts list.
 
-The case prints in two halves (**Body L** + **Body R**) joined by a center **Stripe** accent piece. Add **Risers** for tilt and **Hardware** for assembly.
+---
 
-```
-[ Body L ] [ Stripe ] [ Body R ]
-              + Risers (tilt)
-              + Feet / Dowels / Standoffs
-```
+## Design spec — what you need to make your own case
 
-## Parts
+Both cases are built around the **same PCB**, so the hard constraints below are fixed. Everything else (wall style, seam, tilt) is a design choice — the two cases just make different choices.
 
-### `Main Body/`
-| File | Notes |
-|---|---|
-| `Body L.stl` / `Body R.stl` | Left + right case halves (standard wall) |
-| `Body L 2mm.stl` / `Body R 2mm.stl` | Thicker 2 mm wall variant — stiffer, more filament |
-| `Stripe.stl` | Center accent strip that joins the two halves |
-| `3 Part Stripe.stl` | Stripe split into 3 pieces — for smaller print beds |
+### Fixed constraints (from the PCB / 96% standard)
+| Spec | Value | Source |
+|---|---|---|
+| Layout footprint | Melody96 / YMDK96 96% | board lineage |
+| Key pitch | 19.05 mm | MX standard |
+| Switch cutout | 14.0 × 14.0 mm | MX plate |
+| Plate thickness | 1.5 mm | MX clip seat |
+| Mount holes present | M2 (1.75 mm) + M3 (3.0 mm) | `NPTH.drl` |
+| PCB outline ref | `3D Step File/PCB 3D.step` | exact edge + holes |
 
-> Print **either** the standard halves **or** the 2 mm halves — not both.
+### How the two cases solve it
+| Aspect | Melody96 (HughMann) | 96% (RobotDoctor) |
+|---|---|---|
+| Pieces | 3 (L + Stripe + R) | 2 (L + R) |
+| Seam | center stripe joins halves | direct center seam |
+| Alignment | printed dowels | model-mated edge |
+| Tilt | separate 5° riser parts | baked in: **angle** or **flat** body |
+| Wall options | standard **or** 2 mm | single wall (per variant) |
+| Assembled W × D × H | 387.6 × 140.3 × 21.7 mm | ≈376 × 128.8 × 31.5 (angle) / 18.0 (flat) |
+| Half max footprint | 221.9 × 140.3 mm (Body R) | 188.0 × 128.8 mm |
+| PCB hold | standoffs + dowels + feet | integrated bosses |
+| Extras included | risers, feet, dowels, standoffs, remixes | none — body only |
 
-### `Risers/`
-Add a 5° typing tilt.
-| File | Notes |
-|---|---|
-| `5 Degree Riser Single Piece.stl` | One-piece riser (needs a large bed) |
-| `5 Degree Riser L.stl` / `5 Degree Riser R.stl` | Split riser for smaller beds |
+### Compare / contrast — takeaways
+- **Modularity:** Melody96 is a kit (swap stripe, risers, wall thickness, remixes). RobotDoctor is monolithic — fewer choices, fewer parts to align.
+- **Tilt strategy:** Melody96 = add-on riser (mix and match). RobotDoctor = pick angle vs flat at print time (no extra parts, but no in-between).
+- **Print effort:** RobotDoctor halves (max 188 mm) print on any bed with no stripe/dowel steps. Melody96 split also fits small beds but has more pieces; its one-piece remix needs a ~388 mm bed.
+- **Assembly:** Melody96 needs dowels + standoffs + feet. RobotDoctor mates halves directly.
+- **Hardware:** Melody96 ships printable hardware (feet/dowels/standoffs); RobotDoctor expects you to mount the PCB to integrated bosses (see its `Images/pcb_marked_1.jpg`).
 
-### `Hardware/`
-| File | Notes |
-|---|---|
-| `Feet.stl` | Bottom feet |
-| `Dowel.stl` | Alignment pins joining the case halves |
-| `Extra standoff.stl` | Spare PCB mounting standoff |
+### To design a fresh case
+1. Pull exact outline + hole positions from `3D Step File/PCB 3D.step`.
+2. Pull key positions from `skyway96.layout.json` (or `KLE DATA/`).
+3. Use the fixed constraints table above for plate cutouts (19.05 pitch, 14×14, 1.5 mm).
+4. Choose construction (tray / sandwich / split like these two), tilt, wall thickness.
 
-### `Remixes/`
-Community variants — alternate styling, same fit.
-| File | Notes |
-|---|---|
-| `Granular Theory (Stoic Reluctance) Body L M2.stl` | Remix left half (M2 hardware) |
-| `Granular Theory (Stoic Reluctance) Body R M2.stl` | Remix right half (M2 hardware) |
-| `Granular Theory (Stoic Reluctance) Stripe M2.stl` | Remix center stripe |
-| `Hope Lost (Sincerity or Rejection) One-Piece File.stl` | One-piece remix body |
-
-## Print Tips
-
-- **Material:** PLA or PETG.
-- **Orientation:** print bodies flat (open side up) for clean key cutouts.
-- **Bed size:** if a single-piece part won't fit, use the split equivalent (`3 Part Stripe`, split risers).
-- **Mounting:** dowels align the halves; standoffs hold the PCB.
+Want a parametric OpenSCAD case generated from these? Pick tray vs sandwich and a tilt angle.
